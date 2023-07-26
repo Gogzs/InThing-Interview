@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Page.FirstPage"
+             xmlns:vm="clr-namespace:DemoApp.ViewModel"
+             x:DataType="{x:Type vm:FirstPageVM}"
+             Title="FirstPage">
+    <VerticalStackLayout 
+            Spacing="25"
+            Padding="30,20">
+        <Entry Text="{Binding TextInput, Mode=TwoWay}"
+               FontSize="20"
+               Placeholder="Type text here"/>
+        <Label Text="Typed text will appear bellow"/>
+        <Label Text="{Binding TextInput}"
+               FontSize="20"/>
+    </VerticalStackLayout>
+</ContentPage>
