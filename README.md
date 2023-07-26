@@ -27,4 +27,10 @@ As shown in the picture above, this is what we want from you:
 ## In case of issues or questions
 Open an issue on this repository, or even better. Create a fork or branch off of the main branch, push it and open a pull request and comment the parts that are bothering you.
 
+## Additional resources
+
+- https://www.youtube.com/watch?v=mgW6xviirQk : Gerald Versluis - What is .NET MAUI? - .NET Maui Crash Course #0
+- https://www.youtube.com/watch?v=nxdApcTMjz8 : Gerald Versluis - Setup Your .NET MAUI Dev Environment - .NET Maui Crash Course #1
+- https://www.youtube.com/watch?v=XmdBXuNPShs : Gerald Versluis - Implement MVVM and Databinding - .NET Maui Crash Course #4
+
 Best of luck
