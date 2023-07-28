@@ -21,7 +21,9 @@ namespace DemoApp.Configuration
                 .AddSingleton<MainPage>()
 
                 .AddSingleton<FirstPageVM>()
-                .AddSingleton<FirstPage>();
+                .AddSingleton<FirstPage>()
+                .AddSingleton<SecondPageVM>()
+                .AddSingleton<SecondPage>();
 
             return serviceCollection;
         }
