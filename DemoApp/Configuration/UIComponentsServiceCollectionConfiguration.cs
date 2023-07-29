@@ -22,6 +22,7 @@ namespace DemoApp.Configuration
 
                 .AddSingleton<FirstPageVM>()
                 .AddSingleton<FirstPage>()
+
                 .AddSingleton<SecondPageVM>()
                 .AddSingleton<SecondPage>();
 

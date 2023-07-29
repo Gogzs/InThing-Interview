@@ -17,5 +17,6 @@ public class AppShellVM
     private void RegisterRoutes()
     {
         Routing.RegisterRoute(nameof(FirstPage), typeof(FirstPage));
+        Routing.RegisterRoute(nameof(SecondPage), typeof(SecondPage));
     }
 }

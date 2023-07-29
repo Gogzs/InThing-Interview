@@ -10,8 +10,15 @@ public partial class SecondPage : ContentPage
         BindingContext = vm;
     }
 
-    async void Button_Clicked(object sender, EventArgs e)
+    private void Button_Clicked_1(object sender, EventArgs e)
     {
-        await DisplayAlert("Button cliked", "Display msg", "ok");
+
+        if (labela1.Text == "")
+        {
+            LabelOneVal.Text = "";
+            return;
+        }
+
+        LabelOneVal.Text = (string)"You entered: " + labela1.Text;
     }
 }

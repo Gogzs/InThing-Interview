@@ -13,7 +13,8 @@
             <Button Text="Go to first page"
                     Command="{Binding GoToFirstPageCommand}"/>
             
-            <Button Text="Go to second page"/>
+            <Button Text="Go to second page"
+                    Command="{Binding GoToSecondPageCommand}"/>
 
             <Label Text="{Binding Message}"/>
             <Button Text="Run on this page"
