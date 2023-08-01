@@ -10,15 +10,5 @@ public partial class SecondPage : ContentPage
         BindingContext = vm;
     }
 
-    private void Button_Clicked_1(object sender, EventArgs e)
-    {
-
-        if (labela1.Text == "")
-        {
-            LabelOneVal.Text = "";
-            return;
-        }
-
-        LabelOneVal.Text = (string)"You entered: " + labela1.Text;
-    }
+   
 }
