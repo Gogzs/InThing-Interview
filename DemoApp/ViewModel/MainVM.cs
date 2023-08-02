@@ -11,6 +11,7 @@ public class MainVM : ObservableRecipient
     private string _message;
 
     public AsyncRelayCommand GoToFirstPageCommand { get; set; }
+    public AsyncRelayCommand GoToSecondPageCommand { get; set; }
     public RelayCommand IncreaseCounterAndUpdateMessageCommand { get; set; }
 
     public string Message
@@ -22,6 +23,7 @@ public class MainVM : ObservableRecipient
     public MainVM(NavigationService navService)
     {
         GoToFirstPageCommand = new AsyncRelayCommand(GoToFirstPageAsync);
+        GoToSecondPageCommand = new AsyncRelayCommand(GoToSecondPageAsync);
         IncreaseCounterAndUpdateMessageCommand = new RelayCommand(IncreaseCounterAndUpdateMessage);
         _navService = navService;
         _count = 0;
@@ -37,4 +39,5 @@ public class MainVM : ObservableRecipient
     {
         await _navService.NavigateToFirstPageAsync();
     }
+    private async Task GoToSecondPageAsync() => await _navService.NavigateToSecondPageAsync();
 }
