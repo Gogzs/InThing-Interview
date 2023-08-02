@@ -8,15 +8,16 @@
     <VerticalStackLayout 
             Spacing="25"
             Padding="30,20">
-        <Entry x:Name="labela1" 
+        
+        <Entry x:Name="textInput" 
                FontSize="20"
-               Text="{Binding TextInput, Mode=TwoWay}"
+               Text="{Binding TextInput}"
                Placeholder="Type text here"/>
-        <Label x:Name="LabelOneVal" 
+        
+        <Label x:Name="textOutput" Text="{Binding TextOutput}"
                FontSize="20"/>
         <Button Text="Update content" 
-                Command="{Binding ChangeLabel}"
-                CommandParameter="{x:Reference LabelOneVal}"/>
+                Command="{Binding ResultCommand}"/>
         
     </VerticalStackLayout>
 </ContentPage>

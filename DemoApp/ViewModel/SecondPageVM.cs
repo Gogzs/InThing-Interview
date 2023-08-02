@@ -1,25 +1,14 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
+using PropertyChanged;
 
 namespace DemoApp.ViewModel;
 
-public class SecondPageVM : ObservableObject
+public class SecondPageVM : ObservableObject, INotifyPropertyChanged
 {
-    private Command _changeLabel;
-    public Command ChangeLabel { get;  }
+    [AddINotifyPropertyChangedInterface]
 
-    private void ChangeLabelCommand(object obj) {
-        var label = obj as Label;
-        if (TextInput == "")
-        {
-            label.Text = "";
-            return;
-        }
-        label.Text="You entered :"+ TextInput;
-    }
-    public SecondPageVM() {
-        ChangeLabel = new (ChangeLabelCommand);
-        
-    }
+    //labela za unos
     private string _textInput;
 
     public string TextInput
@@ -27,4 +16,29 @@ public class SecondPageVM : ObservableObject
         get => _textInput;
         set => SetProperty(ref _textInput, value);
     }
+
+    //labela za ispis
+    private string _textOutput;
+    public string TextOutput { get; set; }
+
+
+    //komanda za klik botunom
+    public Command ResultCommand => new Command(CommandResult);
+
+    private void CommandResult(object obj)
+    {
+        TextOutput = TextInput;
+    }
+
+    public SecondPageVM() {
+       
+       
+       
+        
+    }
+    
+}
+
+internal class AddINotifyPropertyChangedInterfaceAttribute : Attribute
+{
 }
